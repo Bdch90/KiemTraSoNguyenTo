@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<form>
+    <h1>Kiểm tra số nguyên tố</h1><br>
+    <input type="number" id ='input' oninput="change(this.value)"><br>
+    <p>Result : <span id = 'span'></span></p>
+</form>
+<script type="text/javascript">
+    function change(value)
+    {
+        var check=true;
+        var value=document.getElementById('input').value;
+        var ket_qua = document.getElementById('span');
+        if(value<=2)
+        {
+            ket_qua.innerHTML=value +' là số nguyên tố';
+        }
+        if(value>2)
+        {
+            for (x=2;x<value;x++)
+            {
+                if(value%x==0)
+                {
+                    check=false;
+                }
+                else
+                {
+
+                }
+            }
+        }
+        if(check)
+        {
+            ket_qua.innerHTML=value +' là số nguyên tố';
+        }
+        else
+        {
+            ket_qua.innerHTML=value +' không phải là số nguyên tố';
+        }
+    }
+</script>
+</body>
+</html>
